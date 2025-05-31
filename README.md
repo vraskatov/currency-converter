@@ -1,35 +1,28 @@
 # currency_converter
 
-A Python script to convert a specified amount from one currency to another using live exchange rates from [ExchangeRate-API](https://exchangerate-api.com/).
+A Streamlit application for converting a given amount from one currency to another using live exchange rates from [ExchangeRate-API](https://exchangerate-api.com/) and plotting historical data based on data from [Frankfurter](https://frankfurter.dev/)
 
 ## Features
-- Fetches real-time exchange rates for any currency pair.
-- Converts an amount from a base currency to a target currency.
-- Validates user inputs for robustness.
-- Provides clear error messages for invalid inputs or API errors.
+- Fetches real-time exchange rates for currency pairs.
+- Converts a given amount from a base currency to a target currency.
+- Generates lineplots of exchange rates for a given amount of years.
 
-## How It Works
-The script:
-1. Fetches live exchange rates for the base currency using the ExchangeRate-API.
-2. Checks if the target currency is available in the rates.
-3. Calculates the converted amount and displays it along with the exchange rate.
+## How To Run the App
+- install git
+- select a folder and clone the repositor into it with:\
+```git clone https://github.com/vraskatov/currency-converter.git```
+- create a virtual environment in the cloned folder and activate it
+- pip install the requirements into the environment using:\
+```pip install -r requirements.txt```
+- then navigate in the terminal to where the file app.py is and run:\
+```streamlit run app.py```
+This should start the app.\
+If the app does not open in the browser automatically paste ```http://localhost:8501/``` into a tab of your browser.
 
-## Requirements
-- Python 3.x
-- The `requests` library for making HTTP requests. Install it using:
-  ```bash
-  pip install requests
 
+## Todos
 
-## Connected Apps
-
-### List of Currencies and info
-- Get a list of currencies with the full name and country of use
-
-### Histical data
-
-## To Does
-
-- Add a User Interface
-- Add List of Currencies
-- Add a predictor of the currency rate 
+- Split up utils.py into different modules
+- Add a predictor of the currency rate
+- Generate better plots
+- Improve the design of the app

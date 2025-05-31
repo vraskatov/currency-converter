@@ -29,13 +29,6 @@ def convert_amount(source: str, target: str, amount: float) -> tuple:
     return converted_amount, conversion_rate
 
 
-def collect_conversion_input():
-    source = st.session_state['source-currency']
-    target = st.session_state['target-currency']
-    amount = st.session_state['specified-amount']
-    return source, target, amount
-
-
 def get_conversion_rate(source: str, target: str,
                         amount: float) -> float | str:
     url = f'https://v6.exchangerate-api.com/v6/{EXCHANGE_API_KEY}/pair/{source}/{target}/{amount}'
@@ -112,6 +105,3 @@ def adjust_line_plot_tickers(ax):
 
     return ax
 
-
-# Needed for time series exchange rate data!
-# https://frankfurter.dev/
