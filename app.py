@@ -87,8 +87,10 @@ with tab2:
             max_value=5,
             value=1,
             step=1,
-            key='num-years'
+            key='num-years',
+            label_visibility='collapsed',
         )
+        st.caption('Choose the years range plotted')
     with col2:
         plot_button = st.button(
             label='Generate plot',
